@@ -36,5 +36,8 @@ myapp.run(function ($rootScope) {
 
     document.addEventListener("click", function (e) {
         $rootScope.$broadcast("documentClicked", e.target);
-    })
+    });
+    document.addEventListener("backbutton",function(e){
+      navigator.app.exitApp();
+    },false);
 });
