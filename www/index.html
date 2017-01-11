@@ -1,0 +1,46 @@
+<HTML ng-app="myapp">
+
+  <Head>
+    <Title>
+      ToDo App
+    </Title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.10/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.10/angular-route.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/sbar.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/directive/sidebar.js"></script>
+
+
+
+
+  </Head>
+  <body ng-controller="SidebarController">
+
+
+
+      <header class="header">
+        <button class="header__menu-toggle" ng-click="showLeft($event)"><span class="menu_left">&#9776;</span></button>
+      </header>
+      <menu visible="leftVisible" alignment="left">
+        <menu-item hash="home">Home</menu-item>
+        <menu-item hash="todo">Todo</menu-item>
+        <menu-item hash="about">About</menu-item>
+      </menu>
+      <div ng-view></div>
+
+
+
+</Body>
+
+</HTML>
